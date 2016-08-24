@@ -1,0 +1,34 @@
+APP="phx"
+
+BUILD_HOST="localhost" # host where to build the release
+BUILD_USER="ip82" # local user at build host
+BUILD_AT="/tmp/erlang/my-app/builds" # build directory on build host
+
+PRODUCTION_HOSTS="ec2-54-175-245-49.compute-1.amazonaws.com" # deploy / production hosts separated by space
+PRODUCTION_USER="ubuntu" # local user at deploy hosts
+DELIVER_TO="/opt/phx" # deploy directory on production hosts
+
+pre_erlang_clean_compile() {
+  status "Preparing assets with: brunch build and phoenix.digest"
+  __sync_remote "
+    # runs the commands on the build host
+    [ -f ~/.profile ] && source ~/.profile # load profile (optional)
+
+    # fail if any command fails (recommended)
+    set -e
+
+    # enter the build directory on the build host (required)
+    cd '$BUILD_AT'
+
+    mkdir -p priv/static # required by the phoenix.digest task
+
+    # installing npm dependencies
+    npm install
+
+    # building brunch
+    brunch build --production
+
+    # run your custom task
+    APP='$APP' MIX_ENV='$TARGET_MIX_ENV' $MIX_CMD phoenix.digest $SILENCE
+  "
+} 

@@ -19,7 +19,7 @@ defmodule Phx.Mixfile do
   def application do
     [mod: {Phx, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :edeliver, :mix]]
   end
 
   # Specifies which paths to compile per environment.
@@ -38,7 +38,8 @@ defmodule Phx.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
-     {:exrm, "~> 0.14.2"}]
+     {:distillery, ">= 0.8.0", warn_missing: false},
+     {:edeliver, "~> 1.4.0"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
