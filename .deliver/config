@@ -14,11 +14,11 @@ BUILD_AT="/home/ubuntu/projects/phx_poc" # deploy directory on production hosts
 
 STAGING_HOSTS="ec2-54-175-245-49.compute-1.amazonaws.com" # deploy / production hosts separated by space
 STAGING_USER="ubuntu" # local user at deploy hosts
-DELIVER_TO="/opt/phx" # deploy directory on production hosts
+DELIVER_TO="/home/ubuntu" # deploy directory on production hosts
 
 PRODUCTION_HOSTS="ec2-54-175-245-49.compute-1.amazonaws.com" # deploy / production hosts separated by space
 PRODUCTION_USER="ubuntu" # local user at deploy hosts
-DELIVER_TO="/opt/phx" # deploy directory on production hosts
+DELIVER_TO="/home/ubuntu" # deploy directory on production hosts
 
 pre_erlang_clean_compile() {
   status "Preparing assets with: brunch build and phoenix.digest"
