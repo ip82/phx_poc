@@ -39,7 +39,8 @@ defmodule Phx.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:distillery, ">= 0.8.0"},
-     {:edeliver, "~> 1.4.0"}]
+     {:edeliver, "~> 1.4.0"},
+     {:phoenix_haml, github: "chrismccord/phoenix_haml"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
