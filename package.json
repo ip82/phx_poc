@@ -6,13 +6,24 @@
     "watch": "brunch watch --stdin"
   },
   "dependencies": {
-    "angular2": "^2.0.0-beta.17",
+    "@angular/common": "2.0.0-rc.5",
+    "@angular/compiler": "2.0.0-rc.5",
+    "@angular/compiler-cli": "0.5.0",
+    "@angular/core": "2.0.0-rc.5",
+    "@angular/forms": "0.3.0",
+    "@angular/http": "2.0.0-rc.5",
+    "@angular/platform-server": "2.0.0-rc.5",
+    "@angular/platform-browser": "2.0.0-rc.5",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.5",
+    "@angular/router": "3.0.0-rc.1",
+    "brunch-typescript": "^1.8.4",
     "es6-shim": "^0.35.0",
+    "phoenix": "file:deps/phoenix",
+    "phoenix_html": "file:deps/phoenix_html",
+    "core-js": "^2.4.0",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.6",
-    "zone.js": "^0.6.12",
-    "phoenix": "file:deps/phoenix",
-    "phoenix_html": "file:deps/phoenix_html"
+    "zone.js": "^0.6.12"
   },
   "devDependencies": {
     "babel-brunch": "~6.0.0",
@@ -20,6 +31,7 @@
     "clean-css-brunch": "~2.0.0",
     "css-brunch": "~2.0.0",
     "javascript-brunch": "~2.0.0",
-    "uglify-js-brunch": "~2.0.1"
+    "uglify-js-brunch": "~2.0.1",
+    "typescript": "^1.9.0-dev"
   }
 }
