@@ -8,7 +8,7 @@
     %meta{:content => "", :name => "description"}/
     %meta{:content => "", :name => "author"}/
     %title Code Notes
-    %link{:href => "#{static_path(@conn, "/css/app.css")}", :rel => "stylesheet"}/
+    %link{rel: 'stylesheet', href : '#{static_path(@conn, "/css/app.css")}'}
   %body
     .container
       %p.alert.alert-info{:role => "alert"}= get_flash(@conn, :info)
