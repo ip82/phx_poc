@@ -25,6 +25,13 @@ config :logger, :console,
 config :phoenix, :template_engines,
   haml: PhoenixHaml.Engine
 
+config :guardian, Guardian,
+  issuer: "Phx",
+  ttl: { 3, :days },
+  verify_issuer: true,
+  secret_key: "asdf773fn23sd87323fn",
+  serializer: PhoenixTrello.GuardianSerializer
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
