@@ -1,4 +1,4 @@
-# Phx
+# Phx-
 
 To start your Phoenix app:
 
